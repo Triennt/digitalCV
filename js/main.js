@@ -86,6 +86,9 @@ allJobInfoCol.forEach((element) => {
       viewMoreOpening = false;
       setHidden(ContentJobInfo);
     });
+    if (viewMoreOpening) {
+      setHidden(btnViewMore);
+    }
   });
 
   //sự kiện rê chuột ra khỏi phần tử

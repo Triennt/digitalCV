@@ -72,7 +72,7 @@ i {
 }
 /* ---------- */
 /* -----Style hiển thị laptop -----*/
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1200px) {
   .section-content {
     /* chia content thành 3 cột tỉ lệ 5:3:4 và 2 hàng */
     display: grid;

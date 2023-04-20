@@ -1,10 +1,27 @@
-/*----- Style cho màn hình tablet chiều rộng nhỏ nhất 992px-----*/
+/*----- Style cho màn hình tablet chiều rộng nhỏ nhất 768px-----*/
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
+  /* ----- Tối ưu font sie */
   .cv-page {
-    /* Đặt font-size phù hợp cho tablet */
-    font-size: 0.9em;
+    font-size: 0.6em;
   }
+  @media screen and (min-width: 814px) {
+    .cv-page {
+      font-size: 0.7em;
+    }
+  }
+  @media screen and (min-width: 918px) {
+    .cv-page {
+      font-size: 0.8em;
+    }
+  }
+  @media screen and (min-width: 1022px) {
+    .cv-page {
+      font-size: 0.9em;
+    }
+  }
+  /* --------------------- */
+
   /* -----NAV-BAR----- */
   #nav-bar {
     /* căn giữa nav-bar với lề trái,phải 7% */

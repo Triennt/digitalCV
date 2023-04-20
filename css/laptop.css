@@ -1,5 +1,5 @@
-/*----- Style cho màn hình laptop chiều rộng nhỏ nhất 1400px-----*/
-@media screen and (min-width: 1400px) {
+/*----- Style cho màn hình laptop chiều rộng nhỏ nhất 1200px-----*/
+@media screen and (min-width: 1200px) {
   .cv-page {
     /* Đặt font-size phù hợp cho laptop */
     font-size: 0.9em;

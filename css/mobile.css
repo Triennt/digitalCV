@@ -1,0 +1,383 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  width: 100%;
+}
+:root {
+  /* background color của span */
+  --me-color1: rgb(38, 148, 199);
+  /* border color */
+  --me-color2: rgb(172, 169, 169);
+  /* shadow color */
+  --shadow-color: rgb(116, 114, 114);
+  /* background khi hover, active */
+  --me-color4: #95e2e7;
+  /* bg color */
+  --me-color5: #78c9cf;
+}
+.cv-page {
+  width: 90%;
+  margin: 5% auto;
+
+  border: 1px solid var(--me-color2);
+  box-shadow: 0 10px 10px 0 var(--shadow-color);
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.8em;
+  line-height: 1.5;
+}
+section {
+  margin: 3% 3%;
+
+  text-align: justify;
+}
+.section-title {
+  /* kiểu chữ cho các tiêu đề của section */
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: left;
+}
+a {
+  text-decoration: none;
+  color: rgb(23, 23, 23);
+}
+.btn {
+  /* tạo bóng mờ cho button */
+  box-shadow: 2px 2px 5px 0px var(--shadow-color);
+}
+/*----- BANNER -----*/
+#banner {
+  /* đặt banner làm vị trí tương đối*/
+  position: relative;
+
+  margin: 3% auto;
+  text-align: center;
+}
+.banner-img {
+  width: 94%;
+  filter: brightness(50%); /* độ sáng của ảnh 50%*/
+}
+#banner .user-name {
+  /* Định vị tuyệt đối user-name */
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* dịch chuyển user-name lùi 50% theo trục x,y so với vị trí tuyệt đối*/
+
+  width: 100%;
+  color: #fff;
+}
+
+/* ---------- */
+/*----- NAV-BAR -----*/
+.avatar {
+  /* ẩn avatar trong mh mobile,tablet */
+  display: none;
+}
+#nav-bar {
+  margin-left: 7%;
+}
+#nav-bar .me-container {
+  /* nav-bar có 1 cột 4 hàng ở mh mobile */
+  display: grid;
+  grid-template-rows: repeat(4, 4em);
+  row-gap: 0.5em;
+  align-items: center;
+}
+
+#nav-bar a {
+  /* tạo kiểu cho thẻ a*/
+  width: 55%;
+  padding: 2% 7%;
+
+  border-radius: 8px;
+  background-color: #d8dad2;
+  box-shadow: 0px 0px 3px 1px var(--shadow-color);
+
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#nav-bar i {
+  margin-right: 7%;
+}
+
+#nav-bar a:hover {
+  /* tạo hiệu ứng khi rê chuột vào các thẻ a */
+  font-size: 1em;
+  text-align: center;
+
+  border-radius: 8px;
+  background-color: var(--me-color4);
+  box-shadow: 0 10px 10px 0 var(--shadow-color);
+}
+/* ---------- */
+/*----- ABOUT -----*/
+#about {
+  padding: 3%;
+  background: var(--me-color5);
+  box-shadow: 3px 3px 10px 1px var(--shadow-color);
+}
+
+#about ul {
+  list-style-type: none;
+  padding: 0;
+}
+#about span {
+  font-weight: bold;
+}
+#about .link-icon {
+  margin-bottom: 3%;
+}
+#about a {
+  color: blue;
+}
+
+#about a:hover {
+  /* tạo hiệu ứng khi rê chuột vào các thẻ a */
+  margin: 0 1%;
+  border: 2px solid rgb(172, 169, 169);
+  border-radius: 6px;
+  background-color: var(--me-color4);
+  box-shadow: 0 5px 10px 0 rgb(116, 114, 114);
+}
+
+/* ---------- */
+/*----- JOB-INFO -----*/
+
+.experience,
+.education,
+.activity,
+.hobby,
+.language,
+.skill {
+  /* định vị tương đối */
+  position: relative;
+  /* tạo viền */
+  margin: 3%;
+  padding: 7%;
+  border: 1px solid #b5b7b8;
+}
+
+#job-info ul {
+  list-style: none;
+  padding-left: 5%;
+}
+#job-info ul li::before {
+  /* tạo dấu chấm tròn trước mỗi thẻ li */
+  content: "\2022";
+  color: var(--me-color1);
+  font-weight: bold;
+  width: 1em;
+  margin-left: -1em;
+
+  display: inline-block;
+}
+#job-info .content p:first-child {
+  /* in đậm các dòng đầu trong content của job-info */
+  font-weight: bold;
+}
+#job-info .content .time {
+  /* in nghiên các thời gian trong content của job-info */
+  font-style: italic;
+}
+#job-info span {
+  /* style cho chữ "Hiện tại" */
+  padding: 3px 8px;
+  background-color: var(--me-color1);
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 1px 1px 10px 0px var(--shadow-color);
+}
+#job-info .ic_title {
+  font-size: 300%;
+}
+#job-info .section-title {
+  margin: 0;
+  align-self: center;
+}
+#job-info .item {
+  margin: 30px 0;
+}
+
+.hobby p {
+  margin-top: 20%;
+}
+
+#job-info .hobby .item {
+  text-align: center;
+}
+
+#job-info .hobby .item i::before {
+  color: blue;
+
+  font-size: 200%;
+  padding: 20%;
+
+  /* tạo đường viền và bóng mờ cho icon */
+  border: 0.3em solid #43e73e;
+  border-radius: 50%;
+  box-shadow: 0 5px 5px 0 var(--shadow-color);
+}
+#job-info .skill span,
+#job-info .language span {
+  /* tạo style cho bậc level chưa đạt */
+  background-color: #c2c5c2;
+  display: inline-block;
+  height: 2px;
+  margin-right: 10px;
+  width: 45px;
+  box-shadow: 0 5px 5px 0 rgb(146, 145, 145);
+}
+#job-info .skill .level-ok,
+#job-info .language .level-ok {
+  /* tạo style cho bậc level đã đạt */
+  background: #43e73e;
+}
+#job-info .skill span,
+#job-info .language span {
+  margin-bottom: 10px;
+}
+#job-info .btn {
+  font-size: xx-small;
+}
+#job-info .content {
+  padding: 3%;
+}
+
+/* ---------- */
+/*----- CERTIFICATEs -----*/
+#certificates {
+  padding: 3%;
+  background: var(--me-color5);
+  box-shadow: 3px 3px 10px 1px var(--shadow-color);
+}
+#certificates img {
+  width: 100%;
+  /* style cho ảnh trong certificates */
+  margin: 3% auto;
+  box-shadow: 1px 1px 10px 0 var(--shadow-color);
+}
+#certificates ul {
+  list-style-type: "- ";
+  padding-left: 10px;
+}
+#certificates p:first-child {
+  font-weight: bold;
+}
+/* tạo đường kẻ giữa các */
+.cert1,
+.cert2,
+.cert3-1 {
+  padding: 5% 3%;
+}
+.cert1,
+.cert2 {
+  border-bottom: 4px solid #d6c08d;
+}
+/* ---------- */
+/*----- PROJECT -----*/
+
+#projects img {
+  width: 100%;
+  margin: 3% auto;
+  box-shadow: 1px 1px 10px 0 var(--shadow-color);
+}
+.project-name {
+  /* in đậm tên dự án */
+
+  font-weight: bold;
+}
+#projects .time {
+  /* tạo style cho năm trong phần projects */
+  padding: 3px 8px;
+  background-color: var(--me-color1);
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 1px 1px 10px 0 var(--shadow-color);
+}
+#projects span {
+  margin-right: 10px;
+}
+table,
+tr,
+td {
+  /* tạo viền cho table */
+  border: 1px solid rgb(19, 18, 18);
+  border-collapse: collapse;
+  vertical-align: top;
+}
+tr,
+td {
+  padding: 10px;
+}
+#projects .project {
+  /* tạo grid trên mỗi cột project */
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  gap: 10px;
+  margin-bottom: 10%;
+}
+#projects a:hover {
+  color: #f80808;
+}
+/* --------- */
+/* ----- FOOTER ----- */
+#footer .me-container {
+  text-align: center;
+  padding-top: 3%;
+  border-top: 2px solid rgb(53, 50, 50);
+}
+#footer a {
+  padding: 1%;
+  color: blue;
+}
+#footer a:hover {
+  border-radius: 6px;
+  background-color: var(--me-color4);
+  box-shadow: 0 10px 10px 0 var(--shadow-color);
+}
+
+/* --------- */
+/* ----- các class bổ trợ cho JS ----- */
+.dropDown {
+  /* tạo cửa sổ nổi */
+  position: absolute;
+  left: 0;
+  top: 80%;
+
+  z-index: 1;
+  background-color: #e1e4b5;
+  border-top: none;
+  box-shadow: 0px 5px 10px 1px var(--shadow-color);
+}
+.box-shadow {
+  /* tạo bóng mờ */
+  background-color: #e1e4b5;
+  box-shadow: 0px 0px 10px 1px var(--shadow-color);
+}
+.view-more {
+  /* định vị nút view more */
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.view-less {
+  /* định vị nút view less */
+
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+.hidden {
+  /* ẩn đối tượng */
+  display: none;
+}
+/* --------- */

@@ -1,0 +1,80 @@
+/*----- Style cho màn hình tablet chiều rộng nhỏ nhất 992px-----*/
+
+@media screen and (min-width: 992px) {
+  .cv-page {
+    /* Đặt font-size phù hợp cho tablet */
+    font-size: 0.9em;
+  }
+  /* -----NAV-BAR----- */
+  #nav-bar {
+    /* căn giữa nav-bar với lề trái,phải 7% */
+    margin: auto 7%;
+  }
+  #nav-bar .me-container {
+    /* nav-bar laptop chia thành 4 cột 1 hàng */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2.5em;
+    column-gap: 3%;
+    text-align: center;
+  }
+  #nav-bar a {
+    width: 100%;
+    padding: 7% 7%;
+    /* chỉnh kiểu chữ */
+    text-transform: uppercase;
+    font-weight: bold;
+    justify-content: center;
+  }
+  #nav-bar a:hover {
+    /* tạo hiệu ứng khi rê chuột vào thẻ a trong nav-bar */
+    font-size: 1.2em;
+  }
+  /* ---------- */
+  /*----- CERTIFICATEs -----*/
+  #certificates {
+    /* tạo 2 cột trong container mỗi cột 50% */
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px min-content min-content;
+  }
+  #certificates h5 {
+    /* chiều rộng h5 chiếm 2 cột */
+    grid-column: 1/-1;
+    align-self: center;
+  }
+
+  #certificates ul {
+    list-style-type: "- ";
+    padding-left: 10px;
+  }
+  #certificates p:first-child {
+    font-weight: bold;
+  }
+  #certificates .container > div {
+    /* flex cho thẻ div là con trực tiếp của container */
+    display: flex;
+  }
+  /* +++ tạo đường kẻ giữa các certificates +++ */
+  .certificate1,
+  .certificate2,
+  .certificate3-1 {
+    padding: 3%;
+  }
+  .certificate1,
+  .certificate2 {
+    margin-bottom: 3%;
+    border-bottom: none;
+  }
+  .certificate1 {
+    border-right: 4px solid #d6c08d;
+  }
+  .certificate3 {
+    grid-column: 1/-1;
+    border-top: 4px solid #d6c08d;
+    display: grid;
+    grid-template-columns: 50%;
+  }
+  /* +++++ */
+  /* --------- */
+}

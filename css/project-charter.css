@@ -1,0 +1,118 @@
+/* -----Style cho Mobile và Tablet----- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  width: 100%;
+}
+h1 {
+  margin-bottom: 1em;
+
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  color: chocolate;
+}
+h2 {
+  padding-bottom: 0.5em;
+  border-bottom: 0.13em solid rgb(161, 217, 221);
+  color: blue;
+}
+
+h3,
+h2 {
+  font-weight: bold;
+}
+.project-charter {
+  width: 95%;
+  margin: 5% auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+}
+.section-content {
+  text-align: justify;
+  background-color: rgb(202, 225, 226);
+  border: 0.3em solid blue;
+  box-shadow: 0 0 1em 0.3em rgb(78, 77, 77);
+}
+.goals,
+.scope,
+.team,
+.primary,
+.timeline {
+  padding: 1em;
+  border: 0.3em solid blue;
+}
+.goal,
+.member,
+.primary {
+  display: flex;
+  flex-direction: column;
+}
+
+i {
+  align-self: center;
+  justify-self: center;
+  margin: 0 0.5em;
+  color: brown;
+  font-size: 2em;
+}
+.goal,
+.member,
+.primary-item,
+.project-date,
+.scope-content {
+  padding: 0.5em;
+}
+.goal,
+.project-date {
+  border-bottom: 0.1em solid rgb(161, 217, 221);
+}
+/* ---------- */
+/* -----Style hiển thị laptop -----*/
+@media screen and (min-width: 1400px) {
+  .section-content {
+    /* chia content thành 3 cột tỉ lệ 5:3:4 và 2 hàng */
+    display: grid;
+    grid-template-columns: 5fr 3fr 4fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .timeline {
+    /* nằm ở cột thứ 3 và trên 2 hàng */
+    grid-row: 1/-1;
+    grid-column: 3/4;
+  }
+  .team {
+    /* nằm ở cột 2 hàng 1 */
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+  .scope-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7%;
+  }
+  .goal,
+  .member,
+  .project-date {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: auto auto;
+
+    justify-items: start;
+  }
+  .primary-item {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    align-items: center;
+  }
+  i {
+    grid-row: 1/-1;
+  }
+}
+/* ---------- */
+.hidden {
+  display: none;
+}

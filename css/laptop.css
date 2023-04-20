@@ -1,0 +1,37 @@
+/*----- Style cho màn hình laptop chiều rộng nhỏ nhất 1400px-----*/
+@media screen and (min-width: 1400px) {
+  .cv-page {
+    /* Đặt font-size phù hợp cho laptop */
+    font-size: 0.9em;
+  }
+
+  #nav-bar .me-container {
+    /* nav-bar laptop chia thành 5 cột 1 hàng */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 2.5em;
+    column-gap: 3%;
+    text-align: center;
+  }
+  #nav-bar a:hover {
+    /* tạo hiệu ứng khi rê chuột vào thẻ a trong nav-bar */
+    font-size: 1.1em;
+  }
+
+  .avatar {
+    /* hiện avatar ở màn hình laptop */
+    display: block;
+    width: 90%;
+    border: 0.9em solid white;
+    border-radius: 50%;
+    box-shadow: 0 0px 20px 0px rgb(0, 0, 0);
+    z-index: 1;
+    justify-self: center;
+  }
+  .avatar:hover {
+    /* tạo hiệu ứng khi rê chuột vào avatar */
+    border: 1em solid #43e73e;
+    box-shadow: 0 0px 15px 3px rgb(20, 20, 20);
+    width: 100%;
+  }
+}

@@ -29,6 +29,7 @@ const dropDown = function (element) {
 const info = document.querySelector(".info"); //phần info
 const authentication = document.getElementById("authentication"); //form xác thực
 const btnSubmit = document.getElementById("submit"); //nút submit
+const formText = document.querySelector(".form-text");
 // ......
 
 setHidden(info); //gọi hàm để ẩn info
@@ -42,6 +43,9 @@ btnSubmit.addEventListener("click", function (event) {
   if (check) {
     setShow(info); //hiện info
     setHidden(authentication); //ẩn form
+  } else {
+    formText.textContent = "Định dạng email không đúng vui lòng nhập lại.";
+    formText.style.color = "red";
   }
 });
 // ---------------------------------------------------------------------------------------------

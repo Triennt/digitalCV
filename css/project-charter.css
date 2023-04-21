@@ -47,7 +47,7 @@ h2 {
 }
 .goal,
 .member,
-.primary {
+.primary-item {
   display: flex;
   flex-direction: column;
 }

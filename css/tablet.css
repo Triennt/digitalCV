@@ -49,12 +49,12 @@
   }
   /* ---------- */
   /*----- CERTIFICATEs -----*/
-  #certificates {
-    /* tạo 2 cột trong container mỗi cột 50% */
-    display: grid;
+  /* #certificates { */
+  /* tạo 2 cột trong container mỗi cột 50% */
+  /* display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 100px min-content min-content;
-  }
+  } */
   #certificates h5 {
     /* chiều rộng h5 chiếm 2 cột */
     grid-column: 1/-1;
@@ -68,12 +68,12 @@
   #certificates p:first-child {
     font-weight: bold;
   }
-  #certificates .container > div {
-    /* flex cho thẻ div là con trực tiếp của container */
-    display: flex;
-  }
+  /* #certificates .container > div { */
+  /* flex cho thẻ div là con trực tiếp của container */
+  /* display: flex; */
+  /* } */
   /* +++ tạo đường kẻ giữa các certificates +++ */
-  .certificate1,
+  /* .certificate1,
   .certificate2,
   .certificate3-1 {
     padding: 3%;
@@ -91,7 +91,7 @@
     border-top: 4px solid #d6c08d;
     display: grid;
     grid-template-columns: 50%;
-  }
+  } */
   /* +++++ */
   /* --------- */
 }

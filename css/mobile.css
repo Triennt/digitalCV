@@ -289,7 +289,7 @@ a {
 }
 .project-name {
   /* in đậm tên dự án */
-
+  /* color: #2958f3; */
   font-weight: bold;
 }
 #projects .time {
@@ -322,8 +322,14 @@ td {
   gap: 10px;
   margin-bottom: 10%;
 }
-#projects a:hover {
+/* #projects a:hover {
   color: #f80808;
+} */
+.project:hover {
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: var(--me-color4);
+  box-shadow: 3px 3px 3px 3px var(--shadow-color);
 }
 /* --------- */
 /* ----- FOOTER ----- */

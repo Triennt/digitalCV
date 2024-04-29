@@ -47,6 +47,9 @@
     /* tạo hiệu ứng khi rê chuột vào thẻ a trong nav-bar */
     font-size: 1.2em;
   }
+  .avatar {
+    display: none;
+  }
   /* ---------- */
   /*----- CERTIFICATEs -----*/
   /* #certificates { */

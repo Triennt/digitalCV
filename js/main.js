@@ -36,10 +36,10 @@ setHidden(info); //gọi hàm để ẩn info
 // sự kiện click vào nút submit
 btnSubmit.addEventListener("click", function (event) {
   event.preventDefault(); //chống reload trang
-  const emailvalue = document.getElementById("email").value; //lấy giá trị từ input gán vào biến emailvalue
+  const emailValue = document.getElementById("email").value; //lấy giá trị từ input gán vào biến emailvalue
   const checkmail =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  const check = emailvalue.match(checkmail); //kiểm tra đinh dạng email
+  const check = emailValue.match(checkmail); //kiểm tra đinh dạng email
   if (check) {
     setShow(info); //hiện info
     setHidden(authentication); //ẩn form
